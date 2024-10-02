@@ -13,3 +13,7 @@ yarn build
 ```
 
 to bundle your application
+
+
+
+npm run serve
