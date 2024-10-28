@@ -1,10 +1,10 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import sunTex from './2k_sun.jpg';
-import earthTex from './2k_earth.jpg';
-import moonTex from './2k_moon.jpg';
-import skyBox from './2k_stars.jpg';
-import marsTex from './2k_mars.jpg';
+import sunTex from '../images/2k_sun.jpg';
+import earthTex from '../images/2k_earth.jpg';
+import moonTex from '../images/2k_moon.jpg';
+import skyBox from '../images/2k_stars.jpg';
+import marsTex from '../images/2k_mars.jpg';
 
 export class main {
     init() {
@@ -14,12 +14,12 @@ export class main {
         this.camera.position.z = -100000;
         this.clock = new THREE.Clock();
 
-        var renderer = new THREE.WebGLRenderer({ antialias: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setClearColor(0xEEEEEE);
-        renderer.shadowMap.enabled = true;
-        this.renderer = renderer;
-        document.body.appendChild(renderer.domElement);
+        this.renderer = new THREE.WebGLRenderer({ antialias: true });
+        this.renderer.setSize(window.innerWidth, window.innerHeight);
+        this.renderer.setClearColor(0xEEEEEE);
+        this.renderer.shadowMap.enabled = true;
+
+        document.body.appendChild(this.renderer.domElement);
         this.controls = new OrbitControls(this.camera, this.renderer.domElement);
 
         this.setupEvents();
