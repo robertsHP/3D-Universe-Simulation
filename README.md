@@ -1,19 +1,3 @@
-# 🚀 Welcome to your new awesome project!
-
-This project has been created using **webpack-cli**, you can now run
-
-```
-npm run build
-```
-
-or
-
-```
-yarn build
-```
-
-to bundle your application
-
-
-
-npm run serve
+# 3D solar system
+A THREE.js based 3D solar system that has a earth with a moon, sun and mars. The camera is centered on the sun which can be controlled with the mouse.
+![photo](https://github.com/user-attachments/assets/12c5a851-af70-4668-8e94-9bf54a3b71a7)
